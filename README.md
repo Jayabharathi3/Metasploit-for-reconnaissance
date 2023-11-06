@@ -23,12 +23,15 @@ Open terminal and try execute some kali linux commands
 ## EXECUTION STEPS AND ITS OUTPUT:
 
 ### Find out the ip address of the attackers system
+
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/8e0c33ca-46e4-4c01-9d3d-3569c3b4bdff)
 
 ### Invoke msfconsole 
+
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/78354b07-be6a-49b8-8a8d-2e44ed1db890)
 
 ### Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole.
+
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/04c7e825-7d02-4089-b357-6b859b50a15f)
 
 ### Port Scanning:
@@ -47,39 +50,43 @@ scan the targets with the command db_nmap as follows.
 
 ### Metasploit has a multitude of scanning modules built in. If we open another terminal, we can navigate to Metasploit's auxiliary modules and list all the scanner modules. 
 **cd /usr/share /metasploit-framework/modules/auxiliary kali > ls -l**
+
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/073c5bd8-f5fd-4577-9215-65ee31324087)
 
 
 ### Search is a powerful command in Metasploit that you can use to find what you want to locate.
-**msf >search name:Microsoft type:exploit**
+**msf >search name : Microsoft type : exploit**
 
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/088595f6-3650-4508-b097-0176944d98ae)
 
-![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/92497548-0c45-48d3-b500-b6a5bd3526dd)
-
-### Search is a powerful command in Metasploit that you can use to find what you want to locate.
-**msf >search name:Microsoft type:exploit**
+### info
 
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/a0801a52-773f-422d-afc4-d7c4c9dcf89f)
 
 ## MYSQL ENUMERATION
 
 **db_nmap -sV -sC -p 3306 <metasploitable_ip_address>**
+
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/fc09f869-b6fd-4051-ac9a-87abd535fe1a)
 
 ### Use the search option to look for an auxiliary module to scan and enumerate the MySQL **database. search type:auxiliary mysql**
+
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/bfa3e745-b188-4093-b6da-c2b73a4e6fc0)
 
 **use 11 Or: use auxiliary/scanner/mysql/mysql_version**
+
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/a80ee301-0a4c-4517-b461-cd3eca0882e5)
 
 **Use the set rhosts command to set the parameter and run the module, as follows **
+
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/548220d6-edf5-434d-9782-5e665dc4253d)
 
 **After scanning, you can also brute force MySQL root account via Metasploit's auxiliary(scanner/mysql/mysql_login) module.**
+
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/a630f38a-b262-444e-8749-dff963f7e444)
 
 **/usr/share/wordlists: set PASS_FILE /usr/share/wordlistss/rockyou.txt**
+
 ![image](https://github.com/Jayabharathi3/Metasploit-for-reconnaissance/assets/120367796/79f3bd03-78ae-4904-83c2-7733949c28c1)
 
 
